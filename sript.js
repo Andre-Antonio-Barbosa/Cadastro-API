@@ -25,8 +25,23 @@ function viaCEP() {
 
 
                 // Pega o valor deste campo que está vazio, e atribui este objeto, especificando o campo mencionado, netse caso(logradouro)
-                document.querySelector('#inputAddress').value = retornoEmJson.logradouro
+                document.querySelector('#inputEndereco').value = retornoEmJson.logradouro
 
             })
         })
+}
+
+let campoRequired = ()=>{
+    // Pegar todas as tags do tipo input e salvar em uma variável
+    let campos = document.querySelectorAll('input').value
+
+    // Percorrer todos os campos salvos na variável
+    for (let i = 0; i < campos.length; i++){
+        // Valida se os campos estão vazios 
+        if (campo[i].value == ''){
+            alert('Preencha o campo: ' + campos[i].id)
+            // Caso esteja vazia, retorna como 'false', mostrao alerte trava o loop 
+            // O id se faz necessário para validar individualmente cada campo
+        }
+    }
 }
